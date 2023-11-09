@@ -1,0 +1,1 @@
+insert into book (category_name, isbn, title, publisher, price) values ("scifi", "12345", "exforce", "audible", 19.99);

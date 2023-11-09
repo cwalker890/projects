@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+
+    <!-- <script type="text/javascript">
+        $(function(){
+            $('#birthDate').datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeYear: true
+            });
+
+            $("#singerDescription").ckeditor(
+                    {
+                        toolbar : 'Basic',
+                        uiColor : '#CCCCCC'
+                    }
+            );
+        });
+    </script> -->
+
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+
+    <spring:message code="label_book_new" var="labelBookNew"/>
+    <spring:message code="label_book_update" var="labelBookUpdate"/>
+    <spring:message code="label_book_category_name" var="labelBookCategoryName"/>
+    <spring:message code="label_book_isbn" var="labelBookIsbn"/>
+    <spring:message code="label_book_title" var="labelBookTitle"/>
+    <spring:message code="label_book_publisher" var="labelBookPublisher"/>
+    <spring:message code="label_book_price" var="labelBookPrice"/>
+
+    <spring:eval expression="book.id == null ? labelBookNew:labelBookUpdate"
+                 var="formTitle"/>
+
+    <h1>${formTitle}</h1>
+
+    <div id="bookUpdate">
+        <form:form modelAttribute="book" id="bookUpdateForm" method="post"
+                   enctype="multipart/form-data">
+
+        <c:if test="${not empty message}">
+                <div id="message" class="${message.type}">${message.message}</div>
+            </c:if>
+
+            <form:label path="category_name">
+                ${labelBookCategoryName}*
+            </form:label>
+            <form:input path="category_name" />
+            <div>
+                <form:errors path="category_name" cssClass="error" />
+            </div>
+            <p/>
+
+            <form:label path="isbn">
+                ${labelBookIsbn}*
+            </form:label>
+            <form:input path="isbn" />
+            <div>
+                <form:errors path="isbn" cssClass="error" />
+            </div>
+            <p/>
+
+            <form:label path="title">
+                ${labelBookTitle}
+            </form:label>
+            <form:input path="title" id="title"/>
+            <div>
+                <form:errors path="title" cssClass="error" />
+            </div>
+            <p/>
+
+            <form:label path="publisher">
+                ${labelBookPublisher}
+            </form:label>
+            <form:input path="publisher" id="publisher"/>
+            <div>
+                <form:errors path="publisher" cssClass="error" />
+            </div>
+            <p/>
+
+            <form:label path="price">
+                ${labelBookPrice}
+            </form:label>
+            <form:input path="price" id="price"/>
+            <div>
+                <form:errors path="price" cssClass="error" />
+            </div>
+            <p/>
+
+            <!-- <form:label path="description">
+                ${labelSingerDescription}
+            </form:label>
+            <form:textarea cols="60" rows="8" path="description" id="singerDescription"/>
+            <div>
+                <form:errors path="description" cssClass="error" />
+            </div>
+            <p/>
+
+            <label for="file">
+                ${labelSingerPhoto}
+            </label>
+            <input name="file" type="file"/>
+            <p/> -->
+
+            <form:hidden path="version" />
+
+            <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+                <span class="ui-button-text">Save</span>
+            </button>
+            <button type="reset" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+                <span class="ui-button-text">Reset</span>
+            </button>
+        </form:form>
+    </div>
+</div>
