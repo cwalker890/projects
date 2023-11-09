@@ -1,0 +1,246 @@
+Progress Report 8
+2023-03-22 21:07 EST
+----------------------------------------
+
+Estimated Project Completion: 100%
+
+List of Issues
+---------------
+1. None
+
+Status of Issues
+----------------
+1. None
+
+Completed Milestones
+--------------------
+1. Full log compteted every other day documenting our percentage of project completion, list of issues, status of those issues, and completed milestones throughout our work.
+2. Accumulated substantial twitter and financial data regarding 10 public companies.
+3. The data allowed the team to produce python codes to determine daily sentiment ratios for each of the companies that provided insight on whether it was smart to buy or sell each stock. 
+4. A backtesting code was produced. Based on the buy or sell value, our starting wallet of $1,000,000 would be debited or credited based on the value of the stock at the tim eof the transaction.
+5. Three queries were created to produce the total value of the portfolio, the net percentage of gain or loss of the portfolio, and the maximum percentage drawdown experienced by the portfolio.
+6. Created unit tests to confirm the script ran according to plan.
+7. Project completion.
+
+================================================================================================================
+
+Progress Report 7
+2023-03-21 17:54 EST
+----------------------------------------
+
+Estimated Project Completion: 90%
+
+List of Issues
+---------------
+1. Logging and exception handling functions need to be double checked before the final version of the project is completed.
+2. Complete another review to ensure that the code is up to PEP8 standards.
+3. Finalize the README file to provide an introduction, an overview, and directions to users. 
+4. We have decided as a group that we will not be attempting to tackle Flask and the extre credit assignment.
+
+Status of Issues
+----------------
+1. Unresolved but in progress.
+2. Unresolved but in progress.
+3. Unresolved but in progress.
+4. Resolved.
+
+Completed Milestones
+--------------------
+1. The team met via Zoom on Tuesday afternoon to discuss the final details needed to complete the assignment. 
+2. All three queries have been completed.
+3. The driver app has been fully implemented.
+4. Comments and docstrings have been added where necessary. 
+5. We will communicate via email to wrap up everyone's final tasks to complete the assignment. 
+
+================================================================================================================
+
+Progress Report 6
+2023-03-19 20:15 EST
+----------------------------------------
+
+Estimated Project Completion: 70% 
+
+List of Issues
+--------------
+1. Following our team meeting Saturday morning, we continued working to complete the backtesting logic, but during the afternnon, we discovered a major flaw in our solution. In general, we were focusing on the value of the 1M budget rather than the value of the portfolio.  The logic we had was still fine, but we needed to add additional elements and logic to manage the portfolio value. The tricky part was implementing the logic to account for the change in stock price.  We were able to implement this solution late Saturday.
+2. Unit testing is now the main challenge given the nature of the code. There aren't a lot of methods and the methods we've implemented are not very easily testable. As I mentioned in the last progress report, we may need to make some code changes to be able to implement some of the unit tests. 
+3. Working concurrently is a challenge since much of the code exists in a single class and the elements depend on this class.
+4. Nobody on the team has any experience in working with Flask. Time may be a factor in determinging whether we're able to attempt this. 
+
+Status of Issues
+----------------
+1. Resolved.
+2. Unresolved but in-progress.
+3. Unresolved but working through it.
+4. Unresolved.
+
+Completed Milestones
+--------------------
+1. The team met via Zoom on Saturday morning to discuss the ongoing work and the plan going forward.
+2. Resolved a significant issue with the backtesting logic (see Issue 1 above). Backtesting is now complete.
+3. Completed two of the three queries Saturday night.
+4. The last query (for determining the max percent drawdown) was completed Sunday morning.
+5. Added more detailed logging Sunday. 
+6. Added additional exception handling, but there's still more to do.
+7. The next Zoom meeting has not been scheduled, but we will likely decide on the next meeting time Monday.
+
+==================================================================================================================
+
+Progress Report 5
+2023-03-17 23:26 EST
+----------------------------------------
+
+Estimated Project Completion: 40% 
+
+List of Issues
+--------------
+1. Our biggest issue by far has been acquiring and manipulating the data from Twitter so that it exists in the same way it would if we could have retrieved it through a single request. The data had to be retrieved through multiple requests and then had to be combined into a single file. Then the dates had to be set so that they covered the 8 month time period in 2021. 
+2. For the implementation of the backtesting logic and the queries, there are currently no significant issues. It now seems to be a matter of getting it done, provided no unexpected issues arise.
+3. Determining how to work concurrently is a bit of a problem since most of the remaining elements are closely related or dependent upon one another. 
+4. In looking forward towards unit testing, we have yet to think about how some parts of this will be done since the backtesting itself is a big process that relies on very specific data (the original data was not easy to obtain and set up).  In other words, how do we testing the primary backtesting method (and some of the other methods).  This may require some code changes to make the methods more testable.
+5. We need to determine the actual source of the data for the queries. In other words, do we store data like the daily portfolio balance as we run the backtest or should we calculate the value from the original data when the query method is called?
+6. Nobody on the team has any experience in working with Flask. Time may be a factor in determinging whether we're able to attempt this. 
+
+Status of Issues
+----------------
+1. Resolved.
+2. Resolved. 
+3. Unresolved but working through it.
+4. Unresolved.
+5. Unresolved. 
+6. Unresolved.
+
+Completed Milestones
+--------------------
+1. The Yahoo Finance and Twitter data files needed some additional work but now have been set, checked-in, and are ready for use.
+2. Since the last report, the team has developed a much clearer understanding of the backtesting logic and is now making significant progress towards implementing the solution.
+3. The team is becoming more comfortable in using DataFrames, which makes solving data manipulation problems much faster and easier.
+4. The formula for determining whether to buy or sell is tentatively set although some minor tweaking may be necessary. 
+5. Part of primary backtesting method has been implemented and the remaining work seems clear.
+6. The concepts for implementing the query methods seem clear but a few details need to be decided by the team. 
+7. The team continues to communicate consistently via email and Zoom so that everyone is up to date and on the same page with our operations.
+8. Will be meeting on Saturday morning to check-in and discuss further steps.
+
+==================================================================================================================
+
+Progress Report 4
+2023-03-15 19:36 EST
+----------------------------------------
+
+Estimated Project Completion: 20% 
+
+List of Issues
+--------------
+1. Generate a cumulative report of all data from Twitter data and Yahoo Financial data that accumulates the sentiment ratio and close price for each data through Jan 1, 2021 - Aug 31, 2021.
+2. Develop a backtesting system to determine whether to buy or sell a security for each day of the period. 
+3. Begin to develop a backtesting query to aggregate results of our backtesting system to shows results for total portfolio value on a given date, net percentage gain or loss at the end of the backtest, and maximum percentage drawdawn experienced by the portfolio during the backtest. 
+4. Begin to develop unit tests for our modules. 
+
+Status of Issues
+----------------
+1. Unresolved, acquired data necessary but need to aggregate close price.
+2. Unresolved but we have our sentiment ratio parameters. 
+3. Unresolved but making progress.
+4. Unresolved but making progress.
+
+Completed Milestones
+--------------------
+1. Completed our third Zoom session as a team to divide up operations and have agreed to meet again this coming weekend.
+2. We have accumlated the data necessary to generate a sentiment ratio through randomizing the data for unaccessible/missing data. 
+3. Python scripts to acquire companies, dates, and sentiment ratio is completed.
+4. We have an understanding of how we are going to buy/sell securities according to their sentiment ratio.
+5. Completed initial work in transforming and merging the stock price and twitter data so that it can be more easily processed during backtesting.  Checked in source files and resulting merged data file. This was a pretty big milestone since it took several days to figure out and work around the issues with getting the data from Twitter. It still requires some testing but the tweets have dates in the Jan-Aug 2001 date range as well as stock price info in a new column.
+
+==================================================================================================================
+
+Progress Report 3
+2023-03-13 21:30 EST
+----------------------------------------
+
+Estimated Project Completion: 12%
+
+List of Issues
+--------------
+1. Generate our list of 10 stocks to acquire data for. 
+2. Progress has been made to calculate the sentiment ratio (we can calculate the number of likes, retweets, and will generate a random number for replies).
+3. We need to decide whether we will generate random data to calculate the sentiment ratio for the time period Jan 1, 2021 - August 31, 2021 or we will simply repeat the data every 7 days. 
+4. We must determine what range of sentiment ratio will receive a buy signal and what range of sentiment ratio will receive a sell signal.
+5. Learn more about backtesting process. 
+6. Design and concept of operation are not yet clear. 
+
+State of Issues
+---------------
+1. Resolved
+2. Unresolved, but have the process and knowledge needed to resolve. 
+3. Unresolved, but leaning towards agreeing on generating random numbers.
+4. Unresolved, will discuss in next team meeting on Wednesday.
+5. Unresolved but making progress.
+6. Unresolved but making progress.
+
+Completed Milestones
+--------------------
+1. Jason listed out 10 stocks to focus on through the project, the stocks were chosen based on Twitter activity (followers and tweet interaction).
+2. We had a Zoom meeting yesterday and established our current status. We also received direction to go ahead a generate random data for tweet replies because that data was unaccessible through the initial Twitter credentials. 
+3. Will circle back and Zoom again Wedneday evening to discuss next steps.
+4. Generated initial csv files from Yahoo Finance and Twitter. Now we just need to understand how to process and manipulate them.
+5. Although the concept is not yet clear, began initial steps on classes in hopes that this will help us gain a better understanding.
+
+===============================================================================================================
+
+Progress Report 2
+2023-03-11 19:23 EST
+----------------------------------------------------
+
+Estimated Project Completion: 5% 
+
+List of Issues
+--------------
+1. Although a little progress was made since the last report, the main issue is still a lack of understanding of the requirements. operational concept, and how the elements provided in the guidelines fit together (general flow, what classes are needed, etc.).
+2. To calculate the stock sentiment ratio, we need to be able to obtain the number of replies to each tweet. In Twitter API version 1.1, this information was available, but it doesn't appear to be in version 2.
+3. The instructions state that the number of shares for any stock in the portfolio is 100 or 0. It's unclear if this means that we will always either own 100 shares or 0 shares of stock throughout the period from Jan 1, 2021, to August 31, 2021, or if this is per day.
+4. We need to determine how to transform Twitter data from the last week into data that covers the period from Jan 1, 2021, to August 31, 2021.
+
+State of Issues
+---------------
+1. Unresolved, but making slow progress.   
+2. Unresolved but continuing to investigate and waiting for response in class forum.
+3. Unresolved. Will discuss in team meeting on 3/12. If it's still unclear, will pose question in class forum. 
+4. Unresolved. Have not began investigation.
+
+Completed Milestones
+--------------------
+1. Received access to GitHub repository on 3/10.
+2. Received Twitter credentials on 3/10.
+3. On 3/11, installed Yahoo Finance and tweepy modules; ran initial tests to learn how to obtain and store stock historical data and Twitter data for 10 S&P 500 companies.  Successfully obtained and saved the data from Yahoo Finance but was unable to obtain the Twitter data since the 'number of replies' data no longer seems to be available.
+4. Cory provided some example code in our shared document showing how he's using Pandas outside of class.
+5. Ken provided test code he's been working with to team through shared document. 
+   
+============================================================================================================
+
+Progress Report 1
+2023-03-09 18:38 EST
+----------------------------------------------------
+
+Estimated Project Completion: 1% (Project Initiated)
+
+List of Issues
+--------------
+1. The primary issue is a lack of understanding of the requirements. operational concept, and how the elements provided in the guidelines fit together.
+2. No access to Twitter
+3. No GitHub repository has been provided 
+
+State of Issues
+---------------
+1. Unresolved, but believe progress will be made before next report   
+2. Unresolved, but believe this will be resolved before next report
+3. Unresolved, but believe this will be resolved before next report 
+
+Completed Milestones
+--------------------
+1. Held team meeting via Zoom on 3/9 to kickoff project, review the project guidelines, and devise initial plan. The following summarizes the topics discussed and next steps:
+    - The team agreed that we first needed to develop a better understanding of the requirements and concept of operation in order to identify/assign tasks and begin working on design and other activities.  
+    - Due to our different schedules, we decided that each of us would perform our own initial investigation until our next Zoom meeting, and report discoveries and questions in a shared document. Jason took the action to create and share this document.   
+    - We decided that we would utilize the Agile approach as specified in the project guidelines with the understand that each of us would need to contribute regularly throughout the duration of the project.  
+    - After unsucessfully applying to obtain Twitter API credentials, Cory took the action to create a post in the class forum to inform professor.   
+    - Ken took action to create the initial 'Progress.txt' file and add it to the repository.
+    - We decided that we would meet again via Zoom NLT Sunday, 3/12, to share what we've each learned and determine how to proceed. 
